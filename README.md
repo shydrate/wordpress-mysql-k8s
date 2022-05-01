@@ -9,3 +9,4 @@ Steps to deploy the services:
   `kubectl get pvc && kubectl get pods && kubectl get svc`.
 5. If you are running the above resources in minikube, then run `minikube service wordpressServiceName` to access the portal/frontend.
 6. If you are running on any cloud based k8s service, Make sure the loadbalancer is created and accessible by exposing it to public.
+7. If you want to change the secrets, replace the encoded value with your password. Cmd to encode is `echo -n 'my-string' | base64` and to decode `echo -n 'bXktc3RyaW5n' | base64 --decode`
